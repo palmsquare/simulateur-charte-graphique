@@ -126,11 +126,11 @@ function App() {
   const CurrentStepComponent = steps[currentStep].component
 
   return (
-    <div className="min-h-screen bg-white py-6 px-4">
+    <div className="min-h-screen bg-white py-4 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-          <div className="p-5 bg-black">
-            <h1 className="text-2xl font-bold text-white text-center mb-4">
+          <div className="p-4 bg-black">
+            <h1 className="text-xl font-bold text-white text-center mb-3">
               Simulateur de Charte Graphique
             </h1>
             <StepIndicator 
@@ -141,7 +141,7 @@ function App() {
             />
           </div>
 
-          <div className="p-6 min-h-[600px] flex flex-col">
+          <div className="p-4 min-h-[500px] flex flex-col">
             <div className="flex-1">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -164,7 +164,7 @@ function App() {
             <PriceDisplay formData={formData} />
 
             {currentStep < steps.length - 1 && (
-              <div className="flex justify-between mt-4 pt-4 border-t border-gray-200">
+              <div className="flex justify-between mt-3 pt-3 border-t border-gray-200">
                 <button
                   onClick={prevStep}
                   disabled={currentStep === 0}

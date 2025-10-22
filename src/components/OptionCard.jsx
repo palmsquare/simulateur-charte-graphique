@@ -4,7 +4,7 @@ const OptionCard = ({ icon, title, description, selected, onClick, price }) => {
   return (
     <motion.div
       onClick={onClick}
-      className={`relative cursor-pointer rounded-lg p-4 border transition-all ${
+      className={`relative cursor-pointer rounded-lg p-3 border transition-all ${
         selected
           ? 'shadow-lg border-black bg-black text-white'
           : 'border-gray-300 bg-white hover:border-black hover:shadow-md'
@@ -26,10 +26,10 @@ const OptionCard = ({ icon, title, description, selected, onClick, price }) => {
         </motion.div>
       )}
       
-      <h3 className={`font-bold text-base mb-1 ${selected ? 'text-white' : 'text-gray-800'}`}>{title}</h3>
+      <h3 className={`font-bold text-base mb-1 ${selected ? 'text-white' : 'text-black'}`}>{title}</h3>
       {description && <p className={`text-xs mb-2 ${selected ? 'text-white/90' : 'text-gray-600'}`}>{description}</p>}
       {price && (
-        <div className={`text-sm font-semibold ${selected ? 'text-white' : 'text-gray-700'}`}>
+        <div className={`text-sm font-semibold ${selected ? 'text-white' : 'text-black'}`}>
           {price}
         </div>
       )}

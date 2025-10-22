@@ -8,8 +8,8 @@ const Typography = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2 text-gray-800">Typographies</h2>
-      <p className="text-sm text-gray-600 mb-4">Tu veux qu'on choisisse tes polices ?</p>
+      <h2 className="text-lg font-bold mb-2 text-black">Typographies</h2>
+      <p className="text-sm text-gray-600 mb-3">Tu veux qu'on choisisse tes polices ?</p>
       
       <div className="grid grid-cols-3 gap-3">
         <OptionCard

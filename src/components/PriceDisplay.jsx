@@ -79,16 +79,16 @@ const PriceDisplay = ({ formData }) => {
 
   return (
     <motion.div
-      className="mt-4 rounded-lg shadow-md p-3 text-white bg-black border border-gray-800"
+      className="mt-3 rounded-lg shadow-md p-2 text-white bg-black border border-gray-800"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex items-center justify-between">
         <div className="text-xs font-semibold">Estimation totale</div>
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-baseline gap-1">
           <motion.div
-            className="text-xl font-bold"
+            className="text-lg font-bold"
             key={`fixed-${fixedPrice}`}
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
@@ -108,8 +108,8 @@ const PriceDisplay = ({ formData }) => {
           )}
         </div>
       </div>
-      <div className="text-xs mt-1 text-white/70 text-right">
-        Prix indicatif HT
+      <div className="text-xs text-white/70 text-right">
+        HT
       </div>
     </motion.div>
   )

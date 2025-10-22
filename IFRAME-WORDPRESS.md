@@ -1,12 +1,12 @@
 # 🌐 Code iframe pour WordPress
 
-## Version simple (hauteur fixe - 850px)
+## Version simple (hauteur fixe - 700px)
 
 ```html
 <iframe 
   src="VOTRE_URL_VERCEL_ICI" 
   width="100%" 
-  height="850px" 
+  height="700px" 
   frameborder="0"
   style="border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: block; margin: 40px auto; max-width: 900px;"
   title="Simulateur de Charte Graphique">
@@ -20,7 +20,7 @@
   <iframe 
     src="VOTRE_URL_VERCEL_ICI" 
     width="100%" 
-    height="850px" 
+    height="700px" 
     frameborder="0"
     style="border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"
     title="Simulateur de Charte Graphique">
@@ -101,9 +101,9 @@ Si votre URL Vercel est : `https://simulateur-charte.vercel.app`
 
 ## 📱 Hauteurs recommandées
 
-- **Desktop** : 850px
-- **Mobile** : 900px (plus d'espace pour le défilement)
-- **Tablette** : 850px
+- **Desktop** : 700px
+- **Mobile** : 750px (plus d'espace pour le défilement)
+- **Tablette** : 700px
 
 La hauteur est maintenant **fixe** et ne change plus, même à la dernière étape !
 

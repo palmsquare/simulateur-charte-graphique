@@ -8,8 +8,8 @@ const Images = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2 text-gray-800">Images et photos</h2>
-      <p className="text-sm text-gray-600 mb-4">Tu veux qu'on te prépare une sélection d'images cohérentes avec ta charte ?</p>
+      <h2 className="text-lg font-bold mb-2 text-black">Images et photos</h2>
+      <p className="text-sm text-gray-600 mb-3">Tu veux qu'on te prépare une sélection d'images cohérentes avec ta charte ?</p>
       
       <div className="grid grid-cols-3 gap-3">
         <OptionCard

@@ -9,8 +9,8 @@ const ClientType = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2 text-gray-800">Ton profil</h2>
-      <p className="text-sm text-gray-600 mb-4">Forfait de base : 500€</p>
+      <h2 className="text-lg font-bold mb-2 text-black">Ton profil</h2>
+      <p className="text-sm text-gray-600 mb-3">Forfait de base : 500€</p>
       
       <div className="grid grid-cols-2 gap-3">
         <OptionCard

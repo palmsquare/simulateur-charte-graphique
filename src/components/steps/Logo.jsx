@@ -8,8 +8,8 @@ const Logo = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-2 text-gray-800">Logo</h2>
-      <p className="text-sm text-gray-600 mb-4">As-tu besoin d'un logo dans ta charte ?</p>
+      <h2 className="text-lg font-bold mb-2 text-black">Logo</h2>
+      <p className="text-sm text-gray-600 mb-3">As-tu besoin d'un logo dans ta charte ?</p>
       
       <div className="grid grid-cols-3 gap-3">
         <OptionCard
