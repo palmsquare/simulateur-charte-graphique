@@ -83,12 +83,43 @@ const Summary = ({ formData, updateFormData, onBack }) => {
       return
     }
 
-    toast.success('✉️ Votre demande a été enregistrée !', {
-      duration: 3000,
-      position: 'bottom-right',
-    })
-    
-    setSubmitted(true)
+    // Afficher un loader
+    const loadingToast = toast.loading('Envoi en cours...')
+
+    try {
+      // Appeler l'API d'envoi d'email
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          formData: formData
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Erreur lors de l\'envoi')
+      }
+
+      toast.dismiss(loadingToast)
+      toast.success('✉️ Email envoyé avec succès !', {
+        duration: 3000,
+        position: 'bottom-right',
+      })
+      
+      setSubmitted(true)
+    } catch (error) {
+      toast.dismiss(loadingToast)
+      toast.error('Erreur lors de l\'envoi. Veuillez réessayer.', {
+        duration: 3000,
+        position: 'bottom-right',
+      })
+      console.error('Error:', error)
+    }
   }
 
   const getClientTypeLabel = () => {
@@ -187,14 +218,6 @@ const Summary = ({ formData, updateFormData, onBack }) => {
         <div className="text-center">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Récapitulatif</h2>
           <p className="text-sm text-gray-600">Entre ton email pour recevoir ton devis personnalisé</p>
-        </div>
-
-        <div className="rounded-lg p-4 border border-black bg-black text-white">
-          <div className="text-center">
-            <p className="text-xs font-semibold mb-1">ESTIMATION TOTALE</p>
-            <p className="text-3xl font-bold">{calculateTotals().fixed.toLocaleString('fr-FR')} €</p>
-            <p className="text-xs mt-2 text-white/80">Prix indicatif HT</p>
-          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-3">
