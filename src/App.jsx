@@ -126,10 +126,10 @@ function App() {
   const CurrentStepComponent = steps[currentStep].component
 
   return (
-    <div className="min-h-screen bg-white py-6 px-4">
+    <div className="min-h-screen bg-gray-50 py-6 px-4">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-gray-100">
-          <div className="p-5" style={{ backgroundColor: '#FF00A7' }}>
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+          <div className="p-5 bg-black">
             <h1 className="text-2xl font-bold text-white text-center mb-4">
               Simulateur de Charte Graphique
             </h1>
@@ -168,8 +168,8 @@ function App() {
                   disabled={currentStep === 0}
                   className={`flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
                     currentStep === 0
-                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300 hover:scale-105'
+                      ? 'bg-gray-100 text-gray-300 cursor-not-allowed border border-gray-200'
+                      : 'bg-white text-black hover:bg-gray-50 hover:scale-105 border border-gray-300'
                   }`}
                 >
                   <FaArrowLeft />
@@ -181,10 +181,9 @@ function App() {
                   disabled={!canProceed()}
                   className={`flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
                     !canProceed()
-                      ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                      : 'text-white hover:opacity-80 hover:scale-105'
+                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed border border-gray-200'
+                      : 'bg-black text-white hover:bg-gray-800 hover:scale-105'
                   }`}
-                  style={canProceed() ? { backgroundColor: '#FF00A7' } : {}}
                 >
                   Suivant
                   <FaArrowRight />

@@ -171,8 +171,7 @@ const Summary = ({ formData, updateFormData, onBack }) => {
         </p>
         <button
           onClick={() => window.location.reload()}
-          className="px-8 py-3 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:opacity-80 shadow-lg"
-          style={{ backgroundColor: '#FF00A7' }}
+          className="px-8 py-3 bg-black text-white rounded-lg font-semibold transition-all hover:scale-105 hover:bg-gray-800 shadow-lg"
         >
           🔄 Recommencer
         </button>
@@ -189,7 +188,7 @@ const Summary = ({ formData, updateFormData, onBack }) => {
           <p className="text-sm text-gray-600">Entre ton email pour recevoir ton devis personnalisé</p>
         </div>
 
-        <div className="rounded-lg p-4 border-2 border-gray-300 text-white" style={{ backgroundColor: '#FF00A7' }}>
+        <div className="rounded-lg p-4 border border-black bg-black text-white">
           <div className="text-center">
             <p className="text-xs font-semibold mb-1">ESTIMATION TOTALE</p>
             <p className="text-3xl font-bold">{calculateTotals().fixed.toLocaleString('fr-FR')} €</p>
@@ -204,15 +203,14 @@ const Summary = ({ formData, updateFormData, onBack }) => {
               value={formData.email}
               onChange={(e) => updateFormData('email', e.target.value)}
               placeholder="ton.email@exemple.com"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#FF00A7] focus:outline-none transition-colors text-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-black focus:outline-none transition-colors text-sm"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 text-white hover:opacity-80 shadow-lg"
-            style={{ backgroundColor: '#FF00A7' }}
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 bg-black text-white hover:bg-gray-800 shadow-lg"
           >
             <FaPaperPlane />
             Recevoir mon devis détaillé
@@ -221,7 +219,7 @@ const Summary = ({ formData, updateFormData, onBack }) => {
 
         <button
           onClick={onBack}
-          className="w-full px-6 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-200 transition-all hover:scale-105 flex items-center justify-center gap-2"
+          className="w-full px-6 py-2 bg-white text-black border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-2"
         >
           ← Retour
         </button>

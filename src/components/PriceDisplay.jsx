@@ -66,7 +66,7 @@ const PriceDisplay = ({ formData }) => {
 
     // Appliquer le multiplicateur selon le type de client
     if (formData.clientType === 'pme') {
-      additionalCosts *= 2 // +100% sur tous les éléments
+      additionalCosts *= 1.5 // +50% sur tous les éléments
     }
 
     const fixed = basePrice + additionalCosts
@@ -79,8 +79,7 @@ const PriceDisplay = ({ formData }) => {
 
   return (
     <motion.div
-      className="mt-4 rounded-lg shadow-md p-3 text-white border-2 border-gray-200"
-      style={{ backgroundColor: '#FF00A7' }}
+      className="mt-4 rounded-lg shadow-md p-3 text-white bg-black border border-gray-800"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
