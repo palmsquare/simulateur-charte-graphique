@@ -8,10 +8,10 @@ const Iconography = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-lg font-bold mb-2 text-black">Iconographie & illustrations</h2>
-      <p className="text-sm text-gray-600 mb-3">Tu veux des pictos ou illustrations sur mesure ?</p>
+      <h2 className="text-base font-bold mb-1 text-black">Iconographie & illustrations</h2>
+      <p className="text-xs text-gray-600 mb-2">Tu veux des pictos ou illustrations sur mesure ?</p>
       
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-2">
         <OptionCard
           title="Aucun"
           price="0 €"

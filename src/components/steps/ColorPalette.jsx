@@ -8,10 +8,10 @@ const ColorPalette = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-lg font-bold mb-2 text-black">Palette de couleurs</h2>
-      <p className="text-sm text-gray-600 mb-3">Tu veux qu'on te crée une palette ?</p>
+      <h2 className="text-base font-bold mb-1 text-black">Palette de couleurs</h2>
+      <p className="text-xs text-gray-600 mb-2">Tu veux qu'on te crée une palette ?</p>
       
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-2">
         <OptionCard
           title="J'ai déjà mes couleurs"
           price="0 €"

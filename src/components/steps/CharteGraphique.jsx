@@ -8,10 +8,10 @@ const CharteGraphique = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-lg font-bold mb-2 text-black">Charte graphique</h2>
-      <p className="text-sm text-gray-600 mb-3">Souhaites-tu un document complet avec exemples et règles ?</p>
+      <h2 className="text-base font-bold mb-1 text-black">Charte graphique</h2>
+      <p className="text-xs text-gray-600 mb-2">Souhaites-tu un document complet ?</p>
       
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-2">
         <OptionCard
           title="Version essentielle"
           description="8–12 pages"

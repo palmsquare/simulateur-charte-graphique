@@ -214,37 +214,37 @@ const Summary = ({ formData, updateFormData, onBack }) => {
   return (
     <>
       <Toaster />
-      <div className="space-y-4 max-h-[500px] overflow-y-auto">
+      <div className="space-y-2 max-h-[400px] overflow-y-auto">
         <div className="text-center">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Récapitulatif</h2>
-          <p className="text-sm text-gray-600">Entre ton email pour recevoir ton devis personnalisé</p>
+          <h2 className="text-base font-bold text-gray-800 mb-1">Récapitulatif</h2>
+          <p className="text-xs text-gray-600">Entre ton email pour recevoir ton devis</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-2">
           <div>
             <input
               type="email"
               value={formData.email}
               onChange={(e) => updateFormData('email', e.target.value)}
               placeholder="ton.email@exemple.com"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-black focus:outline-none transition-colors text-sm"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none transition-colors text-xs"
               required
             />
           </div>
 
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 text-white hover:opacity-90 shadow-lg"
+            className="w-full flex items-center justify-center gap-1 px-4 py-2 rounded-lg text-xs font-semibold transition-all hover:scale-105 text-white hover:opacity-90 shadow-lg"
             style={{ backgroundColor: '#FF00A7' }}
           >
             <FaPaperPlane />
-            Recevoir mon devis détaillé
+            Recevoir mon devis
           </button>
         </form>
 
         <button
           onClick={onBack}
-          className="w-full px-6 py-2 bg-white text-black border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-2"
+          className="w-full px-4 py-1.5 bg-white text-black border border-gray-300 rounded-lg text-xs font-semibold hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-1"
         >
           ← Retour
         </button>

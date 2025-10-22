@@ -126,11 +126,11 @@ function App() {
   const CurrentStepComponent = steps[currentStep].component
 
   return (
-    <div className="min-h-screen bg-white py-4 px-4">
+    <div className="min-h-screen bg-white py-2 px-2">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-          <div className="p-4 bg-black">
-            <h1 className="text-xl font-bold text-white text-center mb-3">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+          <div className="p-3 bg-black">
+            <h1 className="text-lg font-bold text-white text-center mb-2">
               Simulateur de Charte Graphique
             </h1>
             <StepIndicator 
@@ -141,7 +141,7 @@ function App() {
             />
           </div>
 
-          <div className="p-4 min-h-[500px] flex flex-col">
+          <div className="p-3 min-h-[300px] flex flex-col">
             <div className="flex-1">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -164,11 +164,11 @@ function App() {
             <PriceDisplay formData={formData} />
 
             {currentStep < steps.length - 1 && (
-              <div className="flex justify-between mt-3 pt-3 border-t border-gray-200">
+              <div className="flex justify-between mt-2 pt-2 border-t border-gray-200">
                 <button
                   onClick={prevStep}
                   disabled={currentStep === 0}
-                  className={`flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     currentStep === 0
                       ? 'bg-gray-100 text-gray-300 cursor-not-allowed border border-gray-200'
                       : 'bg-white text-black hover:bg-gray-50 hover:scale-105 border border-gray-300'
@@ -181,7 +181,7 @@ function App() {
                 <button
                   onClick={nextStep}
                   disabled={!canProceed()}
-                  className={`flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  className={`flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                     !canProceed()
                       ? 'bg-gray-200 text-gray-400 cursor-not-allowed border border-gray-200'
                       : 'bg-black text-white hover:bg-gray-800 hover:scale-105'

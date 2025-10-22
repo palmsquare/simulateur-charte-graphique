@@ -8,10 +8,10 @@ const ProjectType = ({ formData, updateFormData, onNext }) => {
 
   return (
     <div>
-      <h2 className="text-lg font-bold mb-2 text-black">Type de projet</h2>
-      <p className="text-sm text-gray-600 mb-3">Tu veux une création complète ou une refonte ?</p>
+      <h2 className="text-base font-bold mb-1 text-black">Type de projet</h2>
+      <p className="text-xs text-gray-600 mb-2">Tu veux une création complète ou une refonte ?</p>
       
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-2">
         <OptionCard
           title="Refonte"
           description="Modernisation de ta charte existante"
