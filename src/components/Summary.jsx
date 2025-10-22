@@ -171,7 +171,8 @@ const Summary = ({ formData, updateFormData, onBack }) => {
         </p>
         <button
           onClick={() => window.location.reload()}
-          className="px-8 py-3 bg-black text-white rounded-lg font-semibold transition-all hover:scale-105 hover:bg-gray-800 shadow-lg"
+          className="px-8 py-3 text-white rounded-lg font-semibold transition-all hover:scale-105 hover:opacity-90 shadow-lg"
+          style={{ backgroundColor: '#FF00A7' }}
         >
           🔄 Recommencer
         </button>
@@ -182,7 +183,7 @@ const Summary = ({ formData, updateFormData, onBack }) => {
   return (
     <>
       <Toaster />
-      <div className="space-y-4">
+      <div className="space-y-4 max-h-[500px] overflow-y-auto">
         <div className="text-center">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Récapitulatif</h2>
           <p className="text-sm text-gray-600">Entre ton email pour recevoir ton devis personnalisé</p>
@@ -210,7 +211,8 @@ const Summary = ({ formData, updateFormData, onBack }) => {
 
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 bg-black text-white hover:bg-gray-800 shadow-lg"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105 text-white hover:opacity-90 shadow-lg"
+            style={{ backgroundColor: '#FF00A7' }}
           >
             <FaPaperPlane />
             Recevoir mon devis détaillé

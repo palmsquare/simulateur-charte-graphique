@@ -126,7 +126,7 @@ function App() {
   const CurrentStepComponent = steps[currentStep].component
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 px-4">
+    <div className="min-h-screen bg-white py-6 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
           <div className="p-5 bg-black">
@@ -141,23 +141,25 @@ function App() {
             />
           </div>
 
-          <div className="p-6">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentStep}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <CurrentStepComponent 
-                  formData={formData} 
-                  updateFormData={updateFormData}
-                  onNext={nextStep}
-                  onBack={prevStep}
-                />
-              </motion.div>
-            </AnimatePresence>
+          <div className="p-6 min-h-[600px] flex flex-col">
+            <div className="flex-1">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentStep}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <CurrentStepComponent 
+                    formData={formData} 
+                    updateFormData={updateFormData}
+                    onNext={nextStep}
+                    onBack={prevStep}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
             <PriceDisplay formData={formData} />
 
