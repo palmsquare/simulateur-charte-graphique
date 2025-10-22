@@ -126,9 +126,9 @@ function App() {
   const CurrentStepComponent = steps[currentStep].component
 
   return (
-    <div className="min-h-screen bg-white py-2 px-2">
+    <div className="bg-white">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+        <div className="bg-white rounded-lg overflow-hidden">
           <div className="p-3 bg-black">
             <h1 className="text-lg font-bold text-white text-center mb-2">
               Simulateur de Charte Graphique
